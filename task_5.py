@@ -1,0 +1,36 @@
+# 5) Реализовать класс Stationery (канцелярская принадлежность). Определить в нем атрибут title
+# (название) и метод draw (отрисовка). Метод выводит сообщение “Запуск отрисовки.” Создать
+# три дочерних класса Pen (ручка), Pencil (карандаш), Handle (маркер). В каждом из классов
+# реализовать переопределение метода draw. Для каждого из классов метод должен выводить
+# уникальное сообщение. Создать экземпляры классов и проверить, что выведет описанный
+# метод для каждого экземпляра.
+
+class Stationery:
+    def __init__(self, title):
+        self.title = title
+
+    def draw(self):
+        print('Start rendering')
+
+
+class Pen(Stationery):
+    def draw(self):  # переопределение метода draw
+        print(f'{self.title} starting rendering')
+
+
+class Pencil(Stationery):
+    def draw(self):
+        print(f'{self.title} starting rendering')
+
+
+class Handle(Stationery):
+    def draw(self):
+        print(f'{self.title} starting rendering')
+
+
+obj1 = Pen('Pen')
+obj1.draw()
+obj2 = Pencil('Pencil')
+obj2.draw()
+obj3 = Handle('Handle')
+obj3.draw()
